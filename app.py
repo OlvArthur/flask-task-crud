@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 from models.task import Task
+from flask_cors import CORS   
 
 # __name__ = "__main__"
 app = Flask(__name__ )
+CORS(app)
 
 
 tasks: list[Task] = []
